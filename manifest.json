@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "페이지 정보 추출기",
+  "version": "1.0.0",
+  "description": "페이지의 h태그, alt text, section 정보를 표시합니다",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

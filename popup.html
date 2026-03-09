@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>페이지 정보 추출기</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>페이지 정보</h1>
+      <div class="page-title" id="pageTitle">로딩 중...</div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="headings">H태그</button>
+      <button class="tab-button" data-tab="altTexts">Alt Text</button>
+      <button class="tab-button" data-tab="sections">Section</button>
+    </div>
+
+    <div class="content">
+      <!-- H태그 탭 -->
+      <div class="tab-content active" id="headingsTab">
+        <div class="info-header">
+          <span class="count" id="headingsCount">0</span>개의 헤딩
+          <button class="show-overlay-btn" data-type="headings">화면에 표시</button>
+        </div>
+        <div class="list-container" id="headingsList">
+          <div class="loading">로딩 중...</div>
+        </div>
+      </div>
+
+      <!-- Alt Text 탭 -->
+      <div class="tab-content" id="altTextsTab">
+        <div class="info-header">
+          <span class="count" id="altTextsCount">0</span>개의 이미지
+          <button class="show-overlay-btn" data-type="altTexts">화면에 표시</button>
+        </div>
+        <div class="list-container" id="altTextsList">
+          <div class="loading">로딩 중...</div>
+        </div>
+      </div>
+
+      <!-- Section 탭 -->
+      <div class="tab-content" id="sectionsTab">
+        <div class="info-header">
+          <span class="count" id="sectionsCount">0</span>개의 섹션
+          <button class="show-overlay-btn" data-type="sections">화면에 표시</button>
+        </div>
+        <div class="list-container" id="sectionsList">
+          <div class="loading">로딩 중...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
